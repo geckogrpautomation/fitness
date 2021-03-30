@@ -1,24 +1,21 @@
-# fitness
-
-Fitness tracking App
-
+#Fitness Tracker
   <br/>
   ##readme.md
   <br/>
   
- 
   ![Issues]
   ![Forks]
   ![Stars]
   ![License]   
 
 
-  
-    
-   
-    <h1 align="center">Project Title - Fitness tracker App </h1> 
+  <p align="center">
+    <a href="github.com">
+      <img src="./1_qM9aKqEs3UoBQqWZiABBUA.jpeg" alt="Logo" width="240" height="240">
+    </a>
+    <h1 align="center">Project Title - Fitness Tracker</h1> 
     <h2 align="center">Project Description</h2>
-    <p align="center">A web app that tracks the type and frequency of your excercise routine.
+    <p align="center">A an excercise tracking app that let's the user ntoe the type and frequency of an excercise.    
       <br/>
       <a href="github.com"<strong>Link to the repo.</strong></a>
       <br/>
@@ -26,7 +23,7 @@ Fitness tracking App
       <a href="github.com/issues">Bug Report</a>
       <a href="github.com/issues">Feature Request</a>
     </p>
-  
+  </p>
   
   <details open="open">
     <summary><h3>Table of Contents</h3></summary>
