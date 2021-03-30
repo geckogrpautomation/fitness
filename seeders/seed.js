@@ -1,3 +1,4 @@
+const mongoose = require("mongoose");
 let {Workout} = require('../models/mongo');
 
 let workoutSeed = [
@@ -118,7 +119,15 @@ let workoutSeed = [
   }
 ];
 
+mongoose.connect(
+  process.env.MONGODB_URI || 'mongodb+srv://monash:94A0dkhaahcOhh2r@cluster0.gjxzc.mongodb.net/fitnesstracker?retryWrites=true&w=majority',  {
+    useNewUrlParser: true,    
+    useUnifiedTopology:true
+}).then(
 
+  seed()
+
+);
 function seed(){
  
   Workout.deleteMany({})

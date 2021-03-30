@@ -1,64 +1,64 @@
 // Requiring path to so we can use relative routes to our HTML files
 const mongoose = require("mongoose");
-let {Workout} = require('../models/mongo');
+let { Workout } = require("../models/mongo");
 const path = require("path");
-console.dir(Workout);
-
-function getFormDate(){
-  var today = new Date(Date.now());
-  return today.toISOString();
-}
 
 
-module.exports = function(app) {
-
-
+module.exports = function (app) {
   app.get("/api/workouts", (req, res) => {
-
-    Workout.find({}).then( data =>
-      res.json(data)
-    )  
-
+    Workout.aggregate([
+      {
+        $addFields: {
+          totalDuration: {
+            $sum: "$exercises.duration",
+          },
+        },
+      },
+     // {$limit : 5}
+    ]) .then((data) => {
+      console.log(data);
+      res.json(data);
+    })
+    .catch((err) => console.log(err));
   });
 
   app.get("/api/workouts/range", (req, res) => {
-
-    Workout.find({}).then( data =>
-      res.json(data)
-    )  
-
+    Workout.aggregate([
+      {
+        $addFields: {
+          totalDuration: {
+            $sum: "$exercises.duration",
+          },
+        },
+      },
+     // {$limit : 5}
+    ])
+      .then((data) => {
+        console.log(data);
+        res.json(data);
+      })
+      .catch((err) => console.log(err));
+    // Workout.find({}).then((data) => {
+    //   res.json(data);
+    // });
   });
 
-  
-
-  app.put("/api/workouts/:id", (req, res) => {   
-  
+  app.put("/api/workouts/:id", (req, res) => {
     let arr = [];
     arr.push(req.body);
-    
-    
-    Workout.updateOne({_id : req.params.id} , {day : getFormDate() ,  $push: {exercises : arr}}).then( data =>{
 
-      console.dir("res.json --> " , res.json);
-      res.json(data);
-     
-
-    })  
-
+    Workout.updateOne(
+      { _id: req.params.id },
+      { day: new Date(), $push: { exercises: arr } }
+    ).then((data) =>    
+      res.json(data));
   });
 
-   
-  app.post("/api/workouts", (req, res) => {   
-  
+  app.post("/api/workouts", (req, res) => {
     let arr = [];
-   
-    Workout.create({day : getFormDate() , exercises : arr}).then( data =>
+
+    Workout.create({ day: new Date(), exercises: arr }).then((data) =>
       res.json(data)
-    )  
+    );
   });
-
-
-
-
-}//End module exports.
-
+}; //End module exports
