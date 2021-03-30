@@ -17,7 +17,7 @@
     <h2 align="center">Project Description</h2>
     <p align="center">A an excercise tracking app that let's the user ntoe the type and frequency of an excercise.    
       <br/>
-      <a href="github.com"<strong>Link to the repo.</strong></a>
+      <a href="https://github.com/geckogrpautomation/fitness"<strong>Link to the repo.</strong></a>
       <br/>
       <br/>
       <a href="github.com/issues">Bug Report</a>
