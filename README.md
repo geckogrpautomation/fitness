@@ -10,7 +10,9 @@
 
 
   <p align="center">
-   
+    <a href="github.com">
+      <img src="./public/assets/SamLJackson.png" alt="Logo" width="240" height="240">
+    </a>
     <h1 align="center">Project Title - Fitness Tracker</h1> 
     <h2 align="center">Project Description</h2>
     <p align="center">A an excercise tracking app that let's the user ntoe the type and frequency of an excercise.    
