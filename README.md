@@ -51,7 +51,7 @@
   
   ## About The Project.
   
-  A burger ordering app that displays database insert, update and create utilisation.
+ A an excercise tracking app that let's the user ntoe the type and frequency of an excercise.    
   
   
   
