@@ -15,7 +15,7 @@ Fitness tracking App
 
   <p align="center">
     <a href="github.com">
-      <img src="./public/assets/SamLJackson.png" alt="Logo" width="240" height="240">
+      
     </a>
    
     <h1 align="center">Project Title - Fitness tracker App </h1> 
