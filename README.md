@@ -13,10 +13,8 @@ Fitness tracking App
   ![License]   
 
 
-  <p align="center">
-    <a href="github.com">
-      
-    </a>
+  
+    
    
     <h1 align="center">Project Title - Fitness tracker App </h1> 
     <h2 align="center">Project Description</h2>
@@ -28,7 +26,7 @@ Fitness tracking App
       <a href="github.com/issues">Bug Report</a>
       <a href="github.com/issues">Feature Request</a>
     </p>
-  </p>
+  
   
   <details open="open">
     <summary><h3>Table of Contents</h3></summary>
